@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import * as program from 'commander';
 import { join, dirname } from 'path';
 import { readFileSync, existsSync, writeFileSync, mkdirSync } from 'fs';
@@ -19,7 +20,7 @@ async function convertPackageJson(src: string, dest: string) {
   const origin = readFileSync(src).toString();
   const converted = _convertPackageJson(origin);
 
-  if (!existsSync(dirname(src))) mkdirSync(dirname(src), {recursive: true});
+  if (!existsSync(dirname(dest))) mkdirSync(dirname(dest), {recursive: true});
   writeFileSync(dest, converted);
 }
 
