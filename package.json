@@ -1,0 +1,25 @@
+{
+  "name": "package-json-converter",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": "package-json-converter.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "postbuild": "ts-node scripts/postbuild.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "schematics": "./schematics/collection.json",
+  "dependencies": {
+    "commander": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.14",
+    "ts-node": "^9.1.1",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3"
+  }
+}
